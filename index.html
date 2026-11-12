@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ITIS Othoca Oristano – Formazione, Partecipazione, Crescita</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--ink:#101b2d;--mut:#55627a;--bg:#f2f4f8;--card:#fff;--line:#d8dde8;--pur:#7a2e6b;--pur2:#5d1f51;--tint:#f1e6ef;--sea:#17788a;--on:#fff;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#e9edf5;--mut:#a3aec4;--bg:#0c1422;--card:#141f33;--line:#263653;--pur:#d58bc6;--pur2:#e7aedb;--tint:#2a1c2a;--sea:#5cc3d6;--on:#101b2d;color-scheme:dark}}
+:root[data-theme="dark"]{--ink:#e9edf5;--mut:#a3aec4;--bg:#0c1422;--card:#141f33;--line:#263653;--pur:#d58bc6;--pur2:#e7aedb;--tint:#2a1c2a;--sea:#5cc3d6;--on:#101b2d;color-scheme:dark}
+html{scroll-padding-top:calc(80px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.6 "Instrument Sans",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:30}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pur);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--card);padding:8px 12px;z-index:50}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--card);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:20px;min-height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 1.15rem "Bricolage Grotesque",sans-serif;line-height:1.1}
+.logo small{display:block;font:500 .72rem "Instrument Sans",sans-serif;color:var(--mut)}
+nav{margin-left:auto}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:500}
+nav a:hover{background:var(--tint)}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;background:var(--pur);color:var(--on);font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:1rem}
+.btn:hover{background:var(--pur2)}
+.btn.o{background:transparent;color:var(--pur);border:1.5px solid var(--pur)}
+.menu{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;color:var(--ink);font:inherit}
+.hero{position:relative;overflow:hidden;background:var(--card);border-bottom:1px solid var(--line)}
+.hero svg.tr{position:absolute;right:-40px;top:0;height:100%;width:60%;color:var(--pur);opacity:.16;pointer-events:none}
+.hg{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;padding-top:56px;padding-bottom:48px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em;max-width:14ch}
+.hero p.lead{font-size:1.15rem;color:var(--mut);max-width:46ch;margin:16px 0 24px}
+.search{display:flex;gap:8px;max-width:520px}
+.search input{flex:1;min-width:0;padding:13px 16px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips a{padding:6px 12px;border:1px solid var(--line);border-radius:99px;font-size:.9rem;text-decoration:none;background:var(--card)}
+.chips a:hover{border-color:var(--pur);color:var(--pur)}
+.now{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:22px;align-self:start}
+.now h2{font-size:1.15rem;margin-bottom:6px}
+.now ul{list-style:none;margin:0;padding:0}
+.now li a{display:grid;grid-template-columns:4.6rem 1fr;gap:10px;padding:12px 0;border-top:1px solid var(--line);text-decoration:none}
+.now li:first-child a{border-top:0}
+.now b{white-space:nowrap;font:700 .9rem "Bricolage Grotesque",sans-serif;color:var(--pur);padding-top:2px}
+.now span{font-size:.95rem;line-height:1.4}
+.now a:hover span{text-decoration:underline}
+section{padding:56px 0}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.sh h2{font-size:clamp(1.6rem,3vw,2.1rem)}
+.sh p{margin:6px 0 0;color:var(--mut)}
+.tabs{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:5px;flex-wrap:wrap}
+.tabs button{border:0;background:none;padding:9px 16px;border-radius:8px;font:600 .95rem "Instrument Sans",sans-serif;color:var(--mut);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--pur);color:var(--on)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tile{display:flex;flex-direction:column;gap:4px;padding:20px;background:var(--card);border:1px solid var(--line);border-radius:14px;text-decoration:none;min-height:112px}
+.tile:hover{border-color:var(--pur);transform:translateY(-2px)}
+.tile b{font:700 1.05rem "Bricolage Grotesque",sans-serif}
+.tile span{font-size:.9rem;color:var(--mut);line-height:1.4}
+.tile.big{background:var(--pur);border-color:var(--pur);color:var(--on)}
+.tile.big span{color:inherit;opacity:.85}
+.alert{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--tint);border-radius:16px;padding:22px 26px}
+.alert h2{font-size:1.3rem}.alert p{margin:4px 0 0;color:var(--mut)}
+.two{display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
+.list{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:6px 22px}
+.list h3{font-size:1.2rem;padding:18px 0 8px}
+.list a.r{display:grid;grid-template-columns:52px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--line);text-decoration:none}
+.list a.r b{color:var(--pur);font-family:"Bricolage Grotesque",sans-serif}
+.list a.r:hover span{text-decoration:underline}
+.list .more{display:block;padding:14px 0 18px;font-weight:600;color:var(--pur)}
+.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.course{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--sea);border-radius:12px;padding:20px;text-decoration:none;display:flex;flex-direction:column;gap:8px}
+.course.s{border-left-color:var(--pur)}
+.course:hover{border-color:var(--pur)}
+.course b{font:700 1.1rem "Bricolage Grotesque",sans-serif}
+.course em{font-style:normal;font-size:.85rem;color:var(--mut)}
+.places{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+footer{background:#101b2d;color:#e9edf5;padding:48px 0 32px}
+footer .fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer h3{font-size:1rem;margin-bottom:10px}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin:6px 0}
+footer a{text-decoration:none;color:#c9d2e3}footer a:hover{text-decoration:underline;color:#fff}
+footer small{display:block;margin-top:28px;color:#8f9bb3;border-top:1px solid #263653;padding-top:18px}
+@media(max-width:900px){
+.hg,.two{grid-template-columns:1fr}.grid,.places{grid-template-columns:repeat(2,1fr)}.courses{grid-template-columns:1fr 1fr}footer .fg{grid-template-columns:1fr 1fr}
+.menu{display:block}nav{position:absolute;left:0;right:0;top:100%;background:var(--card);border-bottom:1px solid var(--line);display:none;padding:8px 20px 16px}
+nav.open{display:block}nav ul{flex-direction:column}.bar .btn{display:none}.hero svg.tr{width:100%}}
+@media(max-width:560px){.grid,.places,.courses,footer .fg{grid-template-columns:1fr}.hero h1{max-width:none}.tabs{width:100%}.tabs button{flex:1}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+.tile{transition:transform .15s,border-color .15s}
+.pgw{padding-top:40px;padding-bottom:64px;min-height:60vh}.pgw h1{font-size:clamp(2rem,4.5vw,3rem);font-weight:800;letter-spacing:-.02em}.pgw .lead{color:var(--mut);max-width:60ch;margin:12px 0 8px;font-size:1.1rem}.pgw h2{font-size:1.4rem;margin:36px 0 16px}.bc{font-size:.9rem;color:var(--mut);margin:0 0 12px}.bc a{color:var(--pur)}nav a[aria-current]{background:var(--tint);color:var(--pur)}
+.wrap{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.navbtn{display:none}
+a,button{-webkit-tap-highlight-color:transparent}
+@media(max-width:900px){
+nav{max-height:calc(100dvh - 68px - env(safe-area-inset-top,0px));overflow-y:auto;overscroll-behavior:contain}
+nav a{padding:14px 12px;font-size:1.05rem}
+li.navbtn{display:block;margin-top:8px}.bar nav .btn{display:block;text-align:center}
+.menu{min-height:44px}
+}
+@media(max-width:640px){
+html{scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+.bar{min-height:60px;gap:12px}
+nav{max-height:calc(100dvh - 60px - env(safe-area-inset-top,0px))}
+.logo{font-size:1.05rem}.logo svg{width:34px;height:34px}
+.hg{padding-top:32px;padding-bottom:28px;gap:24px}
+.hero h1{font-size:2.05rem}
+.hero p.lead{font-size:1.02rem;margin:12px 0 20px}
+.hero svg.tr{opacity:.09}
+.search{flex-direction:column}.search .btn{width:100%;padding:13px}
+.hero .chips{flex-wrap:nowrap;overflow-x:auto;margin-right:-20px;padding-right:20px;scrollbar-width:none}.hero .chips a{white-space:nowrap}
+.chips a{padding:9px 14px}
+.now{padding:16px}.now li a{padding:14px 0;grid-template-columns:4.6rem 1fr}
+section{padding:36px 0}
+.sh{margin-bottom:16px}
+.tabs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;width:100%}
+.tabs button{padding:11px 4px;font-size:.85rem;line-height:1.2;min-height:44px}
+.grid,.places,.courses{grid-template-columns:1fr;gap:10px}
+.tile{min-height:0;padding:16px 44px 16px 16px;position:relative}
+.tile::after{content:"›";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:1.6rem;line-height:1;color:var(--pur)}
+.tile.big::after{color:var(--on)}
+.tile:active,.course:active{transform:scale(.985)}
+.alert{padding:18px}.alert .btn{width:100%;text-align:center}
+.list{padding:2px 16px}
+.list a.r{grid-template-columns:44px 1fr;padding:14px 0}
+.course{padding:16px}
+footer{padding:36px 0 24px}
+footer .fg{grid-template-columns:1fr 1fr;gap:24px}footer .fg>div:first-child{grid-column:1/-1}
+footer li{margin:10px 0}
+.pgw{padding-top:24px}.pgw h2{margin:28px 0 12px}
+}
+html{-webkit-text-size-adjust:100%}
+body{overflow-x:clip}
+.hg>*,.two>*,.grid>*,.places>*,.courses>*,.fg>*{min-width:0}
+.hero .chips{max-width:100%}
+.hero h1{overflow-wrap:break-word}
+.tabs{grid-auto-columns:minmax(0,1fr)}
+footer a{overflow-wrap:anywhere}
+html,body{overflow-x:clip}body{overflow-wrap:break-word}
+.hg>*,.two>*,.grid>*,.places>*,.courses>*,.sh>*{min-width:0}
+:root{--ink:#1a1530;--mut:#5f5a7a;--bg:#f6f2fa;--line:#e0d9ec;--pur:#b0308c;--pur2:#85206a;--tint:#fde6f4;--sea:#0b7a86;--amb:#d98a00;--blu:#3d5ce0;--grn:#2c9460;--ambt:#fff0d1;--g1:rgba(176,48,140,.14);--g2:rgba(15,138,150,.14);--ft:#1c1340}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#eef0fb;--mut:#aeb2d4;--bg:#0f1226;--card:#181a36;--line:#2d3160;--pur:#e58fcf;--pur2:#f2b3e3;--tint:#2e1a40;--sea:#5ccfdc;--amb:#f5c04f;--blu:#8fa8ff;--grn:#74d9a4;--ambt:#33270f;--g1:rgba(229,143,207,.16);--g2:rgba(92,207,220,.12);--on:#1a1235;--ft:#0a0c1f}}
+:root[data-theme="dark"]{--ink:#eef0fb;--mut:#aeb2d4;--bg:#0f1226;--card:#181a36;--line:#2d3160;--pur:#e58fcf;--pur2:#f2b3e3;--tint:#2e1a40;--sea:#5ccfdc;--amb:#f5c04f;--blu:#8fa8ff;--grn:#74d9a4;--ambt:#33270f;--g1:rgba(229,143,207,.16);--g2:rgba(92,207,220,.12);--on:#1a1235;--ft:#0a0c1f}
+
+
+.tile{--a:var(--pur)}
+
+.tile:hover{border-color:var(--a)}.tile::after{color:var(--a)}
+.tile.big{box-shadow:none}
+
+.alert{background:var(--tint)}
+
+
+.course{--a:var(--pur)}
+.course{border-left-color:var(--a)}.course:hover{border-color:var(--a)}.course em{color:var(--a);font-weight:600}
+footer{background:var(--ft)}footer small{border-top-color:#3a2f66}
+nav li{position:relative}
+.mm summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:8px;font-weight:500;user-select:none}
+.mm summary::-webkit-details-marker{display:none}
+.mm summary::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--m)}
+.mm summary::after{content:"▾";font-size:.8rem;color:var(--mut);transition:transform .15s}
+.mm[open]>summary::after{transform:rotate(180deg)}
+.mm summary:hover,.mm[open]>summary{background:color-mix(in srgb,var(--m) 16%,transparent)}
+.mm[open]>summary{box-shadow:inset 0 -3px 0 var(--m)}
+.mm .sub{position:absolute;left:0;top:calc(100% + 6px);min-width:250px;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--m);border-radius:12px;padding:8px;box-shadow:0 14px 30px rgba(0,0,0,.18);z-index:60}
+.mm .sub a:hover{background:color-mix(in srgb,var(--m) 16%,transparent)}
+@media(max-width:900px){.mm summary{padding:14px 12px;font-size:1.05rem}.mm .sub{position:static;box-shadow:none;border:0;border-left:4px solid var(--m);border-radius:0;padding:2px 0 6px 8px;margin:0 0 6px 18px;min-width:0;background:transparent}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+<header>
+<div class="wrap bar">
+<a class="logo" href="#top" aria-label="ITIS Othoca, inizio pagina">
+<svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--pur)"/><circle cx="20" cy="20" r="8" fill="none" stroke="var(--on)" stroke-width="3"/><path d="M20 12V4M28 20h8M20 28v8M12 20H4" stroke="var(--on)" stroke-width="2" stroke-linecap="round"/></svg>
+<span>ITIS Othoca<small>Oristano e Ales</small></span></a>
+<button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Principale"><ul>
+
+
+
+
+<li><a href="#contatti">Contatti</a></li>
+<li class="navbtn"><a class="btn" href="https://lnx.itisothoca.edu.it/wp-login.php" target="_blank" rel="noopener">Area riservata</a></li>
+</ul></nav>
+<a class="btn" href="https://lnx.itisothoca.edu.it/wp-login.php" target="_blank" rel="noopener">Area riservata</a>
+</div>
+</header>
+
+<main id="main">
+<div id="home">
+<div class="hero" id="top">
+<svg class="tr" viewBox="0 0 400 400" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 60h120l40 40h160M20 140h80l30 30h90l40-40h120M60 220h140l30 30h130M20 300h100l40-40M160 340h60l40-40h120M300 20v80M340 180v120"/><g fill="currentColor"><circle cx="140" cy="60" r="6"/><circle cx="380" cy="100" r="6"/><circle cx="100" cy="140" r="6"/><circle cx="380" cy="130" r="6"/><circle cx="200" cy="220" r="6"/><circle cx="360" cy="250" r="6"/><circle cx="120" cy="300" r="6"/><circle cx="340" cy="300" r="6"/></g></svg>
+<div class="wrap hg">
+<div>
+<h1>Formazione, partecipazione, crescita</h1>
+<p class="lead">Istituto Tecnico Industriale “Othoca”: informatica, elettronica, elettrotecnica, meccanica e liceo scientifico, a Oristano e Ales.</p>
+<form class="search" action="https://lnx.itisothoca.edu.it/" method="get" target="_blank" role="search">
+<input type="search" name="s" placeholder="Cerca circolari, orari, moduli…" aria-label="Cerca nel sito">
+<button class="btn" type="submit">Cerca</button>
+</form>
+<div class="chips" aria-label="Ricerche frequenti">
+<a href="https://lnx.itisothoca.edu.it/orario-delle-lezioni-2026-27/" target="_blank" rel="noopener">Orario lezioni</a>
+<a href="https://lnx.itisothoca.edu.it/documento/circolari-2026-27/" target="_blank" rel="noopener">Circolari</a>
+<a href="https://lnx.itisothoca.edu.it/circolare/calendario-scolastico-2026-27-e-chiusura-della-scuola-nei-prefestivi/" target="_blank" rel="noopener">Calendario scolastico</a>
+<a href="https://lnx.itisothoca.edu.it/argomento/modulistica/" target="_blank" rel="noopener">Modulistica</a>
+</div>
+</div>
+<aside class="now" aria-labelledby="nowh">
+<h2 id="nowh">Ultime circolari</h2>
+<ul>
+<li><a href="https://lnx.itisothoca.edu.it/circolare/assemblea-sindacale-territoriale-online-cisl-scuola-uil-scuola-rua-snals-confsal-e-anief-lunedi-16-novembre-2026/" target="_blank" rel="noopener"><b>n. 097</b><span>Assemblea sindacale territoriale online, lunedì 16 novembre</span></a></li>
+<li><a href="https://lnx.itisothoca.edu.it/circolare/assemblea-sindacale-nazionale-gilda-unams-personale-docente-educativo-e-ata-in-modalita-a-distanza-giorno-17-novembre-0800-1000-e-1200-1400/" target="_blank" rel="noopener"><b>n. 096</b><span>Assemblea sindacale nazionale Gilda-Unams, 17 novembre</span></a></li>
+<li><a href="https://lnx.itisothoca.edu.it/circolare/orario-delle-lezioni-per-la-sede-di-ales-da-lunedi-09-novembre/" target="_blank" rel="noopener"><b>n. 095</b><span>Orario delle lezioni sede di Ales dal 9 novembre</span></a></li>
+<li><a href="https://lnx.itisothoca.edu.it/circolare/variazione-oraria-uscita-didattica-al-cinema-ariston-di-oristano-martedi-10-novembre-2026/" target="_blank" rel="noopener"><b>n. 094</b><span>Variazione oraria uscita didattica al cinema Ariston, 10 novembre</span></a></li>
+</ul>
+</aside>
+</div>
+</div>
+
+<section id="accesso">
+<div class="wrap">
+<div class="sh"><div><h2>Cosa devi fare oggi?</h2><p>Scegli chi sei e vai dritto a quello che ti serve.</p></div>
+<div class="tabs" role="tablist" id="t1"></div></div>
+<div class="grid" id="g1" role="tabpanel"></div>
+</div>
+</section>
+
+<div class="wrap">
+<div class="alert">
+<div><h2>Bullismo e cyberbullismo: non restare in silenzio</h2><p>Se vivi o vedi una situazione che non va, puoi segnalarlo alla scuola.</p></div>
+<a class="btn" href="https://lnx.itisothoca.edu.it/bullismo-e-cyberbullismo-non-restare-in-silenzio/" target="_blank" rel="noopener">Segnala o chiedi aiuto</a>
+</div>
+</div>
+
+<section id="ultime">
+<div class="wrap two">
+<div class="list">
+<h3>Circolari e avvisi</h3>
+<a class="r" href="https://lnx.itisothoca.edu.it/circolare/orario-delle-lezioni-da-lunedi-26-ottobre-2026/" target="_blank" rel="noopener"><b>071</b><span>Orario delle lezioni da lunedì 26 ottobre 2026</span></a>
+<a class="r" href="https://lnx.itisothoca.edu.it/documento/regolamento-di-istituto/" target="_blank" rel="noopener"><b>Doc.</b><span>Regolamento di Istituto a.s. 2026/27</span></a>
+<a class="r" href="https://lnx.itisothoca.edu.it/documento/programmi-svolti-2025-2026/" target="_blank" rel="noopener"><b>Doc.</b><span>Programmi svolti 2025/2026</span></a>
+<a class="r" href="https://lnx.itisothoca.edu.it/documento/ptof-2025-2028/" target="_blank" rel="noopener"><b>Doc.</b><span>PTOF 2025-2028</span></a>
+<a class="more" href="https://lnx.itisothoca.edu.it/circolare/" target="_blank" rel="noopener">Tutte le circolari</a>
+</div>
+<div class="list">
+<h3>Notizie</h3>
+<a class="r" href="https://lnx.itisothoca.edu.it/albo-doro-diplomati-2026/" target="_blank" rel="noopener"><b>198</b><span>Albo d’Oro diplomati 2026: i diplomati all’Esame di Maturità</span></a>
+<a class="r" href="https://lnx.itisothoca.edu.it/ritiro-diplomi-2025-26/" target="_blank" rel="noopener"><b>Info</b><span>Ritiro diplomi 2025-26</span></a>
+<a class="r" href="https://lnx.itisothoca.edu.it/sciopero-associazione-sindacale-csle/" target="_blank" rel="noopener"><b>Info</b><span>Sciopero Associazione sindacale CSLE</span></a>
+<a class="more" href="https://lnx.itisothoca.edu.it/tipologia-articolo/notizie/" target="_blank" rel="noopener">Tutte le notizie</a>
+</div>
+</div>
+</section>
+
+<section id="percorsi" style="padding-top:0">
+<div class="wrap">
+<div class="sh"><div><h2>Percorsi di studio</h2><p>Anno scolastico 2026/2027</p></div>
+<div class="tabs" role="tablist" id="t2"></div></div>
+<div class="courses" id="g2" role="tabpanel"></div>
+</div>
+</section>
+
+<section id="vita" style="padding-top:0">
+<div class="wrap">
+<div class="sh"><div><h2>Vivere l’Othoca</h2><p>Laboratori, musei e progetti che si fanno anche fuori dall’aula.</p></div></div>
+<div class="places">
+<a class="tile big" href="https://lnx.itisothoca.edu.it/luogo/dove-ci-troviamo/museo-dellinformatica/" target="_blank" rel="noopener"><b>Museo dell’informatica</b><span>La storia dei computer, raccontata dagli oggetti.</span></a>
+<a class="tile" href="https://lnx.itisothoca.edu.it/luogo/dove-ci-troviamo/zoumate/" target="_blank" rel="noopener"><b>Laboratorio Zoumate</b><span>Uno spazio per sperimentare e costruire.</span></a>
+<a class="tile" href="https://lnx.itisothoca.edu.it/othoca360/" target="_blank" rel="noopener"><b>Othoca@360</b><span>Visita la scuola a 360 gradi.</span></a>
+<a class="tile" href="https://lnx.itisothoca.edu.it/scheda-progetto/" target="_blank" rel="noopener"><b>Progetti delle classi</b><span>Cosa stanno realizzando studenti e studentesse.</span></a>
+</div>
+</div>
+</section>
+</div>
+<div id="pg" hidden></div>
+</main>
+
+<footer id="contatti">
+<div class="wrap">
+<div class="fg">
+<div><h3>ITIS “Othoca” Oristano</h3>
+<p>Via Zara, zona industriale<br>09170 Oristano<br>Tel. <a href="tel:0783303080">0783 303080</a></p>
+<p><a href="mailto:ortf02000d@istruzione.it">ortf02000d@istruzione.it</a><br><a href="mailto:ortf02000d@pec.istruzione.it">PEC: ortf02000d@pec.istruzione.it</a></p></div>
+<div><h3>La scuola</h3><ul>
+<li><a href="https://lnx.itisothoca.edu.it/la-scuola/presentazione/" target="_blank" rel="noopener">Presentazione</a></li>
+<li><a href="https://lnx.itisothoca.edu.it/la-scuola/la-storia/" target="_blank" rel="noopener">La storia</a></li>
+<li><a href="https://lnx.itisothoca.edu.it/la-scuola/i-numeri-della-scuola/" target="_blank" rel="noopener">I numeri della scuola</a></li>
+<li><a href="https://lnx.itisothoca.edu.it/scuola/le-persone/" target="_blank" rel="noopener">Le persone</a></li></ul></div>
+<div><h3>Trasparenza</h3><ul>
+<li><a href="https://lnx.itisothoca.edu.it/albo-online/" target="_blank" rel="noopener">Albo online</a></li>
+<li><a href="https://lnx.itisothoca.edu.it/amministrazione-trasparente/" target="_blank" rel="noopener">Amministrazione trasparente</a></li>
+<li><a href="https://lnx.itisothoca.edu.it/privacy-policy/" target="_blank" rel="noopener">Privacy policy</a></li>
+<li><a href="https://lnx.itisothoca.edu.it/note-legali/" target="_blank" rel="noopener">Note legali</a></li></ul></div>
+<div><h3>Seguici</h3><ul>
+<li><a href="https://www.instagram.com/itis.othoca/" target="_blank" rel="noopener">Instagram</a></li>
+<li><a href="https://www.facebook.com/profile.php?id=100063631537231" target="_blank" rel="noopener">Facebook</a></li>
+<li><a href="https://www.youtube.com/@itis.othoca6187" target="_blank" rel="noopener">YouTube</a></li></ul></div>
+</div>
+<small>Codice meccanografico ORTF02000D. Proposta di redesign: i contenuti rimandano al sito ufficiale della scuola.</small>
+</div>
+</footer>
+
+<script>
+(function(){
+var B="https://lnx.itisothoca.edu.it/";
+var A={
+"Studenti e famiglie":[["Registro elettronico","Voti, assenze e compiti","http://www.sg28623.scuolanext.info/",1],["Orario delle lezioni","Aggiornato per il 2026/27",B+"orario-delle-lezioni-2026-27/"],["Circolari","Tutte quelle dell’anno",B+"documento/circolari-2026-27/"],["Libri di testo","Elenco 2026-2027",B+"elenco-dei-libri-di-testo-a-s-2026-2027/"],["Pago in rete","Paga tasse e contributi",B+"servizio/pago-in-rete/"],["Calendario scolastico","Lezioni e chiusure",B+"circolare/calendario-scolastico-2026-27-e-chiusura-della-scuola-nei-prefestivi/"],["Modulistica","Moduli da scaricare",B+"argomento/modulistica/"],["Tutti i servizi","Per famiglie e studenti",B+"tipologia-servizio/famiglie-e-studenti/"]],
+"Personale":[["Registro docenti","Accesso con Didup",B+"servizio/registro-elettronico-docenti-e-personale/",1],["Area riservata","Accedi con le tue credenziali",B+"wp-login.php"],["Circolari","Da leggere e firmare",B+"documento/circolari-2026-27/"],["Albo sindacale","Scioperi e assemblee",B+"argomento/albo-sindacale/"],["Avvisi e interpelli","Aperti e scaduti",B+"tipologia-documento/avvisi-interpelli/"],["Programmi svolti","Anno 2025/2026",B+"documento/programmi-svolti-2025-2026/"],["Albo online","Pubblicità legale",B+"albo-online/"],["Servizi per il personale","Tutti in un posto",B+"tipologia-servizio/personale-scolastico/"]],
+"Vuoi iscriverti":[["Percorsi di studio","Scopri gli indirizzi",B+"indirizzo-di-studio/",1],["PTOF 2025-2028","Il piano dell’offerta formativa",B+"documento/ptof-2025-2028/"],["Corsi serali","Per adulti, diploma tecnico",B+"percorsi-di-istruzione-di-secondo-livello-ex-corsi-serali/"],["Orientamento","Incontra la scuola",B+"argomento/orientamento/"],["Iscrizioni online","Sito del Ministero","https://www.istruzione.it/iscrizionionline//"],["Museo dell’informatica","Vieni a vederlo",B+"luogo/dove-ci-troviamo/museo-dellinformatica/"],["Othoca@360","Visita virtuale",B+"othoca360/"],["I numeri della scuola","In breve",B+"la-scuola/i-numeri-della-scuola/"]]};
+var C={"Oristano":[["Informatica e telecomunicazioni","Articolazione Informatica","Diurno","informatica-e-telecomunicazioni-articolazione-informatica"],["Elettronica ed elettrotecnica","Articolazione Elettrotecnica","Diurno","elettronica-ed-elettrotecnica-articolazione-elettrotecnica"],["Meccanica, meccatronica ed energia","Articolazione Meccanica e Meccatronica","Diurno","meccanica-meccatronica-ed-energia-articolazione-meccanica-e-meccatronica"],["Liceo scientifico","Opzione scienze applicate","Diurno","liceo-scientifico-opzione-scienze-applicate"],["Informatica","Percorso di secondo livello","Serale","informatica-percorso-di-istruzione-di-secondo-livello"],["Elettrotecnica","Percorso di secondo livello","Serale","elettrotecnica-corso-serale"]],
+"Ales":[["Elettronica ed elettrotecnica","Articolazione Elettronica","Diurno","elettronica-ed-elettrotecnica-articolazione-elettronica-sede-di-ales"]]};
+function tabs(tid,gid,data,render){
+var t=document.getElementById(tid),g=document.getElementById(gid),k=Object.keys(data);
+function show(n){
+[].forEach.call(t.children,function(b){b.setAttribute("aria-selected",b.textContent===n)});
+g.innerHTML=data[n].map(render).join("")}
+k.forEach(function(n){var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.textContent=n;b.onclick=function(){show(n)};t.appendChild(b)});
+show(k[0])}
+tabs("t1","g1",A,function(x){return '<a class="tile'+(x[3]?' big':'')+'" href="'+x[2]+'" target="_blank" rel="noopener"><b>'+x[0]+'</b><span>'+x[1]+'</span></a>'});
+tabs("t2","g2",C,function(x){return '<a class="course'+(x[2]=="Serale"?' s':'')+'" href="'+B+'indirizzo-di-studio/'+x[3]+'/" target="_blank" rel="noopener"><em>'+x[2]+'</em><b>'+x[0]+'</b><span>'+x[1]+'</span></a>'});
+var m=document.querySelector(".menu"),n=document.getElementById("nav");
+m.onclick=function(){var o=n.classList.toggle("open");m.setAttribute("aria-expanded",o)};
+function cl(){n.classList.remove("open");m.setAttribute("aria-expanded",false);[].forEach.call(n.querySelectorAll("details[open]"),function(d){d.open=false})}
+var M=[["Scuola","scuola","--pur",[["Presentazione","la-scuola/presentazione/"],["I luoghi","luogo/"],["Le persone","scuola/le-persone/"],["I numeri della scuola","la-scuola/i-numeri-della-scuola/"],["Le carte della scuola","documento/"],["Organizzazione","struttura/"],["La storia","la-scuola/la-storia/"],["Albo sindacale","argomento/albo-sindacale/"]]],["Servizi","servizi","--sea",[["Personale scolastico","tipologia-servizio/personale-scolastico/"],["Famiglie e studenti","tipologia-servizio/famiglie-e-studenti/"],["Percorsi di studio","indirizzo-di-studio/"],["Tutti i servizi","servizio/"]]],["Novità","novita","--amb",[["Le notizie","tipologia-articolo/notizie/"],["Le circolari","circolare/"],["Calendario eventi","evento/"],["Argomenti","argomento/"]]],["Didattica","didattica","--blu",[["Offerta formativa","didattica/offerta-formativa/"],["Le schede didattiche","scheda-didattica/"],["I progetti delle classi","scheda-progetto/"]]]];
+document.querySelector("nav ul").insertAdjacentHTML("afterbegin",M.map(function(s){return '<li><details class="mm" style="--m:var('+s[2]+')"><summary>'+s[0]+'</summary><div class="sub"><a href="#'+s[1]+'">Panoramica</a>'+s[3].map(function(x){return '<a href="'+B+x[1]+'" target="_blank" rel="noopener">'+x[0]+'</a>'}).join("")+'</div></details></li>'}).join(""));
+n.addEventListener("toggle",function(e){if(e.target.open)[].forEach.call(n.querySelectorAll("details[open]"),function(d){if(d!==e.target)d.open=false})},true);
+n.onclick=function(e){if(e.target.closest("a"))cl()};
+document.addEventListener("click",function(e){if(!n.contains(e.target)&&!m.contains(e.target))cl()});
+document.addEventListener("keydown",function(e){if(e.key=="Escape")cl()});
+var P={
+scuola:{t:"Scuola",i:"Chi siamo, dove siamo e come siamo organizzati.",g:[["Conosci la scuola",[["Presentazione","Identità e obiettivi dell’istituto",B+"la-scuola/presentazione/"],["La storia","Come è nato l’Othoca",B+"la-scuola/la-storia/"],["I numeri della scuola","Studenti, classi e dati in breve",B+"la-scuola/i-numeri-della-scuola/"],["Le persone","Dirigenza, docenti e personale",B+"scuola/le-persone/"]]],["Organizzazione e documenti",[["Organizzazione","Strutture e sedi",B+"struttura/"],["Le carte della scuola","Regolamenti e documenti",B+"documento/"],["Regolamento di Istituto","Anno scolastico 2026/27",B+"documento/regolamento-di-istituto/"],["Albo sindacale","Scioperi e assemblee",B+"argomento/albo-sindacale/"]]],["Dove ci troviamo",[["Sede di Oristano","Via Zara, zona industriale",B+"struttura/sede-di-oristano/"],["Sede di Ales","Elettronica ed elettrotecnica",B+"struttura/sede-di-oristano/sede-di-ales/"],["I luoghi","Tutti gli spazi della scuola",B+"luogo/"],["Museo dell’informatica","La storia dei computer",B+"luogo/dove-ci-troviamo/museo-dellinformatica/"],["Laboratorio Zoumate","Spazio per sperimentare",B+"luogo/dove-ci-troviamo/zoumate/"],["Othoca@360","Visita la scuola a 360 gradi",B+"othoca360/"]]]]},
+servizi:{t:"Servizi",i:"Registro, pagamenti e area riservata, raccolti per chi li usa.",g:[["Per famiglie e studenti",[["Registro elettronico","Voti, assenze e compiti","http://www.sg28623.scuolanext.info/"],["Pago in rete","Servizio Pago in rete per le PA",B+"servizio/pago-in-rete/"],["Pago online","Argo didUP Pago PA",B+"servizio/pago-online/"],["Tutti i servizi per le famiglie","Elenco completo",B+"tipologia-servizio/famiglie-e-studenti/"]]],["Per docenti e personale",[["Registro docenti","Accesso con Didup",B+"servizio/registro-elettronico-docenti-e-personale/"],["Area riservata","Accedi con le tue credenziali",B+"wp-login.php"],["Avvisi di interpello","Aperti e scaduti",B+"tipologia-documento/avvisi-interpelli/"],["Servizi per il personale","Elenco completo",B+"tipologia-servizio/personale-scolastico/"]]],["Altro",[["Tutti i servizi","L’elenco intero",B+"servizio/"],["Modulistica","Moduli da scaricare",B+"argomento/modulistica/"],["Albo online","Pubblicità legale",B+"albo-online/"],["Amministrazione trasparente","Atti e dati pubblici",B+"amministrazione-trasparente/"]]]]},
+didattica:{t:"Didattica",i:"Indirizzi, programmi e progetti dell’anno scolastico 2026/2027.",g:[["Offerta formativa",[["Offerta formativa","Cosa si studia all’Othoca",B+"didattica/offerta-formativa/"],["Percorsi di studio","Sette percorsi tra Oristano e Ales",B+"indirizzo-di-studio/"],["Corsi serali","Per adulti, diploma tecnico",B+"percorsi-di-istruzione-di-secondo-livello-ex-corsi-serali/"],["PTOF 2025-2028","Il piano dell’offerta formativa",B+"documento/ptof-2025-2028/"]]],["Per studiare",[["Schede didattiche","Materiali delle materie",B+"scheda-didattica/"],["Progetti delle classi","Cosa realizzano le classi",B+"scheda-progetto/"],["Libri di testo","Elenco 2026-2027",B+"elenco-dei-libri-di-testo-a-s-2026-2027/"],["Orario delle lezioni","Aggiornato per il 2026/27",B+"orario-delle-lezioni-2026-27/"],["Programmi svolti","Anno 2025/2026",B+"documento/programmi-svolti-2025-2026/"],["Calendario scolastico","Lezioni e chiusure",B+"circolare/calendario-scolastico-2026-27-e-chiusura-della-scuola-nei-prefestivi/"]]]]},
+novita:{t:"Novità",i:"Notizie, circolari ed eventi dell’istituto.",g:[["Aggiornamenti",[["Le notizie","Avvisi e racconti dalla scuola",B+"tipologia-articolo/notizie/"],["Le circolari","Comunicazioni ufficiali",B+"circolare/"],["Calendario eventi","Cosa succede e quando",B+"evento/"],["Circolari 2026/27","Archivio dell’anno",B+"documento/circolari-2026-27/"]]],["Cerca per argomento",[["Circolari","circolari"],["Alunni","alunni"],["Insegnanti","insegnanti"],["Albo sindacale","albo-sindacale"],["Orientamento","orientamento"],["Orario","orario"],["Scienze motorie","scienze-motorie"],["Sedi","sedi"],["Avvisi e interpelli","avvisi-e-interpelli"],["Libri di testo","libri-di-testo"],["Modulistica","modulistica"],["PON","pon-programma-operativo-nazionale"],["Registro elettronico","registro-elettronico"],["Privacy","privacy"]],1]]}};
+var T0=document.title;
+function route(){
+var h=location.hash.slice(1),pg=document.getElementById("pg"),home=document.getElementById("home"),d=P[h];
+if(d){
+home.hidden=true;pg.hidden=false;
+pg.innerHTML='<div class="wrap pgw"><p class="bc"><a href="#">Home</a> / '+d.t+'</p><h1 tabindex="-1">'+d.t+'</h1><p class="lead">'+d.i+'</p>'+d.g.map(function(g){
+return '<h2>'+g[0]+'</h2>'+(g[2]?'<div class="chips">'+g[1].map(function(x){return '<a href="'+B+'argomento/'+x[1]+'/" target="_blank" rel="noopener">'+x[0]+'</a>'}).join("")+'</div>':'<div class="grid">'+g[1].map(function(x){return '<a class="tile" href="'+x[2]+'" target="_blank" rel="noopener"><b>'+x[0]+'</b><span>'+x[1]+'</span></a>'}).join("")+'</div>')}).join("")+'</div>';
+document.title=d.t+" – ITIS Othoca";window.scrollTo(0,0);
+}else if(h=="contatti"){document.getElementById("contatti").scrollIntoView();return}else{
+pg.hidden=true;home.hidden=false;document.title=T0;
+var e=h&&document.getElementById(h);
+if(e)e.scrollIntoView();else window.scrollTo(0,0);
+}
+[].forEach.call(document.querySelectorAll("nav a"),function(a){if(a.getAttribute("href")=="#"+h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+}
+window.addEventListener("hashchange",route);route();
+})();
+</script>
+</body>
+</html>
