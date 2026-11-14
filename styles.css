@@ -27,7 +27,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.15;margin:0}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--pur);outline-offset:2px;border-radius:4px}
-.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.wrap{max-width:1500px;margin:0 auto;padding:0 20px}
 .skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--card);padding:8px 12px;z-index:50}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:#111b2e;border-bottom:1px solid rgba(255,255,255,.08)}
 :root[data-contrast="high"] header{background:var(--card)}
@@ -119,14 +119,15 @@ section{padding:56px 0}
 .list a.r:hover span{text-decoration:underline}
 .list .more{display:block;padding:14px 0 18px;font-weight:600;color:var(--pur)}
 .courses{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.course{grid-column:span 2;height:100%;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--sea);border-radius:12px;padding:20px;text-decoration:none;display:flex;flex-direction:column;gap:8px;transition:transform .15s ease,border-color .15s ease}
+.course{grid-column:span 2;height:100%;min-height:390px;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--sea);border-radius:12px;padding:20px;text-decoration:none;display:flex;flex-direction:column;gap:8px;transition:transform .15s ease,border-color .15s ease}
 .course.s{border-left-color:var(--pur)}
 .course:hover{border-color:var(--pur);transform:translateY(-2px)}
 .course b{font:700 1.1rem "Bricolage Grotesque",sans-serif}
 .course em{font-style:normal;font-size:.85rem;color:var(--mut)}
-.course img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+.course img{width:100%;height:210px;object-fit:cover;border-radius:8px}
 .course span{color:var(--mut)}
 .course-heading{margin-top:52px}
+.course-heading h3{font-size:clamp(1.6rem,3vw,2.1rem)}
 .courses-evening{grid-template-columns:repeat(2,minmax(0,1fr));max-width:100%;margin:0 auto}
 .courses-evening .course{grid-column:auto}
 .course-note{margin:24px 0 0;color:var(--mut);font-size:.9rem;text-align:center}
