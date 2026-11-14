@@ -24,11 +24,11 @@ k.forEach(function(n,i){var b=document.createElement("button");b.type="button";b
 show(0)}
 tabs("t1","g1",A,function(x){return '<a class="tile'+(x[3]?' big':'')+'" href="'+x[2]+'" target="_blank" rel="noopener"><b>'+x[0]+'</b><span>'+x[1]+'</span></a>'});
 function renderCourse(x){return '<a class="course'+(x[2]=="Serale"?' s':'')+'" href="'+B+'indirizzo-di-studio/'+x[3]+'/" target="_blank" rel="noopener"><img src="'+x[4]+'" alt="'+x[5]+'" loading="lazy" decoding="async"><em>'+x[2]+' · '+x[7]+'</em><b>'+x[0]+'</b><span>'+x[1]+'</span><span>'+x[6]+'</span></a>'}
-document.getElementById("g2").innerHTML=C.Oristano.concat(C.Ales).map(renderCourse).join("");
+document.getElementById("g2").innerHTML=C.Oristano.map(renderCourse).join("");
 document.getElementById("g3").innerHTML=D.map(renderCourse).join("");
 var fontToggle=document.getElementById("font-toggle"),contrastToggle=document.getElementById("contrast-toggle"),root=document.documentElement;
 fontToggle.onclick=function(){var large=root.dataset.fontSize!=="large";root.dataset.fontSize=large?"large":"normal";fontToggle.setAttribute("aria-pressed",large);fontToggle.setAttribute("aria-label",large?"Ripristina la dimensione del testo":"Aumenta la dimensione del testo");fontToggle.textContent=large?"A−":"A+"};
-contrastToggle.onclick=function(){var high=root.dataset.contrast!=="high";if(high)root.dataset.contrast="high";else delete root.dataset.contrast;contrastToggle.setAttribute("aria-pressed",high);contrastToggle.setAttribute("aria-label",high?"Disattiva il contrasto elevato":"Attiva il contrasto elevato")};
+contrastToggle.onclick=function(){var high=root.dataset.contrast!=="high";if(high)root.dataset.contrast="high";else delete root.dataset.contrast;contrastToggle.setAttribute("aria-pressed",high);contrastToggle.setAttribute("aria-label",high?"Disattiva il contrasto elevato":"Attiva il contrasto elevato");contrastToggle.textContent=high?"Contrasto on":"Contrasto"};
 var m=document.querySelector(".menu"),n=document.getElementById("nav");
 m.onclick=function(){var o=n.classList.toggle("open");m.setAttribute("aria-expanded",o)};
 function cl(){n.classList.remove("open");m.setAttribute("aria-expanded",false);[].forEach.call(n.querySelectorAll("details[open]"),function(d){d.open=false})}
